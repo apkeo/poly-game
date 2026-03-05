@@ -39,14 +39,14 @@ Key variables:
 From `packages/client`:
 
 ```bash
-pnpm dev       # start Vite dev server (default: http://localhost:5173)
-pnpm build     # typecheck (vue-tsc) + production build
-pnpm preview   # preview the production build
+yarn dev       # start Vite dev server (default: http://localhost:5173)
+yarn build     # typecheck (vue-tsc) + production build
+yarn preview   # preview the production build
 ```
 
 When using the workspace root scripts:
 
-- `pnpm dev:client` – run this client in dev mode
+- `yarn dev:client` – run this client in dev mode
 
 ## UI flow
 

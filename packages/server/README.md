@@ -46,14 +46,14 @@ Variables:
 From `packages/server`:
 
 ```bash
-pnpm dev     # ts-node/tsx watcher on src/index.ts
-pnpm build   # compile TypeScript -> dist
-pnpm start   # run compiled server from dist/index.js
+yarn dev     # tsx watcher on src/index.ts
+yarn build   # compile TypeScript -> dist
+yarn start   # run compiled server from dist/index.js
 ```
 
 When using the workspace root scripts:
 
-- `pnpm dev:server` – run this server in dev mode
+- `yarn dev:server` – run this server in dev mode
 
 ## Architecture & flow
 
@@ -106,7 +106,7 @@ When using the workspace root scripts:
 
 ## Development notes
 
-- Make sure MongoDB and Redis are running (e.g. via `docker-compose up -d` from the repo root or `pnpm docker:up`).
+- Make sure MongoDB and Redis are running (e.g. via `docker-compose up -d` from the repo root or `yarn docker:up`).
 - The worker and HTTP API typically run in the same process in dev, but can be split if needed.
 - All uploads and generated assets live under `packages/server/uploads` and are served by the API.
 

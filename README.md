@@ -9,8 +9,8 @@ User uploads a character image → **OpenAI** generates a textual description an
 
 ### Tech stack
 
-- Node 20+
-- pnpm
+- Node 20+ (managed via `mise` if you use it)
+- Yarn (monorepo workspaces)
 - Docker & Docker Compose (for MongoDB and Redis)
 - MongoDB, Redis, BullMQ, Socket.io, OpenAI, Meshy, Three.js
 
@@ -68,8 +68,8 @@ docker-compose up -d
 Or, if you prefer, use the npm scripts:
 
 ```bash
-pnpm docker:up     # start MongoDB and Redis
-pnpm docker:down   # stop containers
+yarn docker:up     # start MongoDB and Redis
+yarn docker:down   # stop containers
 ```
 
 ### 2. Install dependencies
@@ -77,7 +77,7 @@ pnpm docker:down   # stop containers
 From the repository root:
 
 ```bash
-pnpm install
+yarn
 ```
 
 ### 3. Development servers
@@ -85,14 +85,14 @@ pnpm install
 Run both client and server in parallel:
 
 ```bash
-pnpm dev
+yarn dev
 ```
 
 Or start them separately:
 
 ```bash
-pnpm dev:server   # backend on http://localhost:3000
-pnpm dev:client   # frontend on http://localhost:5173
+yarn dev:server   # backend on http://localhost:3000
+yarn dev:client   # frontend on http://localhost:5173
 ```
 
 Default URLs:
@@ -129,9 +129,9 @@ Default URLs:
 
 | Script              | Description                        |
 |---------------------|------------------------------------|
-| `pnpm dev`          | Run client + server in parallel    |
-| `pnpm dev:server`   | Run server only (port 3000)        |
-| `pnpm dev:client`   | Run client only (port 5173)        |
-| `pnpm build`        | Build all packages                 |
-| `pnpm docker:up`    | Start MongoDB and Redis via Docker |
-| `pnpm docker:down`  | Stop Docker containers             |
+| `yarn dev`          | Run client + server in parallel    |
+| `yarn dev:server`   | Run server only (port 3000)        |
+| `yarn dev:client`   | Run client only (port 5173)        |
+| `yarn build`        | Build all packages                 |
+| `yarn docker:up`    | Start MongoDB and Redis via Docker |
+| `yarn docker:down`  | Stop Docker containers             |
