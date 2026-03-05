@@ -146,7 +146,7 @@ export async function describeImageWithGemini(imageDataUri: string): Promise<str
   const [, mimeExt, base64Data] = match;
   const mimeType = mimeExt === 'png' ? 'image/png' : 'image/jpeg';
 
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent`;
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.0-flash:generateContent`;
   const body = {
     contents: [
       {
