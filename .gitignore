@@ -1,0 +1,11 @@
+node_modules
+dist
+.env
+.env.local
+*.log
+.DS_Store
+packages/server/uploads/*
+!packages/server/uploads/.gitkeep
+packages/server/log/
+.idea
+.vscode
